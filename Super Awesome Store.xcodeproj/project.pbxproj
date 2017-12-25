@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E767DAB01FF1B1690062B923 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767DAAF1FF1B1690062B923 /* AppDelegate.swift */; };
+		E767DAB21FF1B1690062B923 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767DAB11FF1B1690062B923 /* ViewController.swift */; };
+		E767DAB51FF1B1690062B923 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E767DAB31FF1B1690062B923 /* Main.storyboard */; };
+		E767DAB71FF1B1690062B923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E767DAB61FF1B1690062B923 /* Assets.xcassets */; };
+		E767DABA1FF1B1690062B923 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E767DAB81FF1B1690062B923 /* LaunchScreen.storyboard */; };
+		E767DAC51FF1B1690062B923 /* Super_Awesome_StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767DAC41FF1B1690062B923 /* Super_Awesome_StoreTests.swift */; };
+		E767DAD01FF1B1690062B923 /* Super_Awesome_StoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767DACF1FF1B1690062B923 /* Super_Awesome_StoreUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E767DAC11FF1B1690062B923 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E767DAA41FF1B1690062B923 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E767DAAB1FF1B1690062B923;
+			remoteInfo = "Super Awesome Store";
+		};
+		E767DACC1FF1B1690062B923 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E767DAA41FF1B1690062B923 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E767DAAB1FF1B1690062B923;
+			remoteInfo = "Super Awesome Store";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E767DAAC1FF1B1690062B923 /* Super Awesome Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Super Awesome Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E767DAAF1FF1B1690062B923 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E767DAB11FF1B1690062B923 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E767DAB41FF1B1690062B923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E767DAB61FF1B1690062B923 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E767DAB91FF1B1690062B923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E767DABB1FF1B1690062B923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E767DAC01FF1B1690062B923 /* Super Awesome StoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Super Awesome StoreTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E767DAC41FF1B1690062B923 /* Super_Awesome_StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Super_Awesome_StoreTests.swift; sourceTree = "<group>"; };
+		E767DAC61FF1B1690062B923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E767DACB1FF1B1690062B923 /* Super Awesome StoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Super Awesome StoreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E767DACF1FF1B1690062B923 /* Super_Awesome_StoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Super_Awesome_StoreUITests.swift; sourceTree = "<group>"; };
+		E767DAD11FF1B1690062B923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E767DAA91FF1B1690062B923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E767DABD1FF1B1690062B923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E767DAC81FF1B1690062B923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E767DAA31FF1B1690062B923 = {
+			isa = PBXGroup;
+			children = (
+				E767DAAE1FF1B1690062B923 /* Super Awesome Store */,
+				E767DAC31FF1B1690062B923 /* Super Awesome StoreTests */,
+				E767DACE1FF1B1690062B923 /* Super Awesome StoreUITests */,
+				E767DAAD1FF1B1690062B923 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E767DAAD1FF1B1690062B923 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E767DAAC1FF1B1690062B923 /* Super Awesome Store.app */,
+				E767DAC01FF1B1690062B923 /* Super Awesome StoreTests.xctest */,
+				E767DACB1FF1B1690062B923 /* Super Awesome StoreUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E767DAAE1FF1B1690062B923 /* Super Awesome Store */ = {
+			isa = PBXGroup;
+			children = (
+				E767DAAF1FF1B1690062B923 /* AppDelegate.swift */,
+				E767DAB11FF1B1690062B923 /* ViewController.swift */,
+				E767DAB31FF1B1690062B923 /* Main.storyboard */,
+				E767DAB61FF1B1690062B923 /* Assets.xcassets */,
+				E767DAB81FF1B1690062B923 /* LaunchScreen.storyboard */,
+				E767DABB1FF1B1690062B923 /* Info.plist */,
+			);
+			path = "Super Awesome Store";
+			sourceTree = "<group>";
+		};
+		E767DAC31FF1B1690062B923 /* Super Awesome StoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				E767DAC41FF1B1690062B923 /* Super_Awesome_StoreTests.swift */,
+				E767DAC61FF1B1690062B923 /* Info.plist */,
+			);
+			path = "Super Awesome StoreTests";
+			sourceTree = "<group>";
+		};
+		E767DACE1FF1B1690062B923 /* Super Awesome StoreUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E767DACF1FF1B1690062B923 /* Super_Awesome_StoreUITests.swift */,
+				E767DAD11FF1B1690062B923 /* Info.plist */,
+			);
+			path = "Super Awesome StoreUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E767DAAB1FF1B1690062B923 /* Super Awesome Store */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E767DAD41FF1B1690062B923 /* Build configuration list for PBXNativeTarget "Super Awesome Store" */;
+			buildPhases = (
+				E767DAA81FF1B1690062B923 /* Sources */,
+				E767DAA91FF1B1690062B923 /* Frameworks */,
+				E767DAAA1FF1B1690062B923 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Super Awesome Store";
+			productName = "Super Awesome Store";
+			productReference = E767DAAC1FF1B1690062B923 /* Super Awesome Store.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E767DABF1FF1B1690062B923 /* Super Awesome StoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E767DAD71FF1B1690062B923 /* Build configuration list for PBXNativeTarget "Super Awesome StoreTests" */;
+			buildPhases = (
+				E767DABC1FF1B1690062B923 /* Sources */,
+				E767DABD1FF1B1690062B923 /* Frameworks */,
+				E767DABE1FF1B1690062B923 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E767DAC21FF1B1690062B923 /* PBXTargetDependency */,
+			);
+			name = "Super Awesome StoreTests";
+			productName = "Super Awesome StoreTests";
+			productReference = E767DAC01FF1B1690062B923 /* Super Awesome StoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E767DACA1FF1B1690062B923 /* Super Awesome StoreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E767DADA1FF1B1690062B923 /* Build configuration list for PBXNativeTarget "Super Awesome StoreUITests" */;
+			buildPhases = (
+				E767DAC71FF1B1690062B923 /* Sources */,
+				E767DAC81FF1B1690062B923 /* Frameworks */,
+				E767DAC91FF1B1690062B923 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E767DACD1FF1B1690062B923 /* PBXTargetDependency */,
+			);
+			name = "Super Awesome StoreUITests";
+			productName = "Super Awesome StoreUITests";
+			productReference = E767DACB1FF1B1690062B923 /* Super Awesome StoreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E767DAA41FF1B1690062B923 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Federico Naranjo Bellina";
+				TargetAttributes = {
+					E767DAAB1FF1B1690062B923 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					E767DABF1FF1B1690062B923 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E767DAAB1FF1B1690062B923;
+					};
+					E767DACA1FF1B1690062B923 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E767DAAB1FF1B1690062B923;
+					};
+				};
+			};
+			buildConfigurationList = E767DAA71FF1B1690062B923 /* Build configuration list for PBXProject "Super Awesome Store" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E767DAA31FF1B1690062B923;
+			productRefGroup = E767DAAD1FF1B1690062B923 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E767DAAB1FF1B1690062B923 /* Super Awesome Store */,
+				E767DABF1FF1B1690062B923 /* Super Awesome StoreTests */,
+				E767DACA1FF1B1690062B923 /* Super Awesome StoreUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E767DAAA1FF1B1690062B923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E767DABA1FF1B1690062B923 /* LaunchScreen.storyboard in Resources */,
+				E767DAB71FF1B1690062B923 /* Assets.xcassets in Resources */,
+				E767DAB51FF1B1690062B923 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E767DABE1FF1B1690062B923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E767DAC91FF1B1690062B923 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E767DAA81FF1B1690062B923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E767DAB21FF1B1690062B923 /* ViewController.swift in Sources */,
+				E767DAB01FF1B1690062B923 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E767DABC1FF1B1690062B923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E767DAC51FF1B1690062B923 /* Super_Awesome_StoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E767DAC71FF1B1690062B923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E767DAD01FF1B1690062B923 /* Super_Awesome_StoreUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E767DAC21FF1B1690062B923 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E767DAAB1FF1B1690062B923 /* Super Awesome Store */;
+			targetProxy = E767DAC11FF1B1690062B923 /* PBXContainerItemProxy */;
+		};
+		E767DACD1FF1B1690062B923 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E767DAAB1FF1B1690062B923 /* Super Awesome Store */;
+			targetProxy = E767DACC1FF1B1690062B923 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E767DAB31FF1B1690062B923 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E767DAB41FF1B1690062B923 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E767DAB81FF1B1690062B923 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E767DAB91FF1B1690062B923 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E767DAD21FF1B1690062B923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E767DAD31FF1B1690062B923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E767DAD51FF1B1690062B923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Super Awesome Store/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "shopify.Super-Awesome-Store";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E767DAD61FF1B1690062B923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Super Awesome Store/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "shopify.Super-Awesome-Store";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E767DAD81FF1B1690062B923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Super Awesome StoreTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "shopify.Super-Awesome-StoreTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Super Awesome Store.app/Super Awesome Store";
+			};
+			name = Debug;
+		};
+		E767DAD91FF1B1690062B923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Super Awesome StoreTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "shopify.Super-Awesome-StoreTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Super Awesome Store.app/Super Awesome Store";
+			};
+			name = Release;
+		};
+		E767DADB1FF1B1690062B923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Super Awesome StoreUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "shopify.Super-Awesome-StoreUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Super Awesome Store";
+			};
+			name = Debug;
+		};
+		E767DADC1FF1B1690062B923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Super Awesome StoreUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "shopify.Super-Awesome-StoreUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Super Awesome Store";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E767DAA71FF1B1690062B923 /* Build configuration list for PBXProject "Super Awesome Store" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E767DAD21FF1B1690062B923 /* Debug */,
+				E767DAD31FF1B1690062B923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E767DAD41FF1B1690062B923 /* Build configuration list for PBXNativeTarget "Super Awesome Store" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E767DAD51FF1B1690062B923 /* Debug */,
+				E767DAD61FF1B1690062B923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E767DAD71FF1B1690062B923 /* Build configuration list for PBXNativeTarget "Super Awesome StoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E767DAD81FF1B1690062B923 /* Debug */,
+				E767DAD91FF1B1690062B923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E767DADA1FF1B1690062B923 /* Build configuration list for PBXNativeTarget "Super Awesome StoreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E767DADB1FF1B1690062B923 /* Debug */,
+				E767DADC1FF1B1690062B923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E767DAA41FF1B1690062B923 /* Project object */;
+}
