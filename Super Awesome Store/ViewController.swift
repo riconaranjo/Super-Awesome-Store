@@ -88,10 +88,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // how many rows
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if data?.products != nil {
-            return (data?.products.count)!
-        }
-        return 0
+        let count = data?.products != nil ? (data?.products.count)! : 0
+        return count
     }
     
     // what is in each cell
@@ -104,7 +102,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // when cell is pressed
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        TableView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -115,6 +112,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // url for products as json objects
         let productsUrlString = "https://shopicruit.myshopify.com/admin/products.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6"
         
+        // if not a valid url, quit
         guard let url = URL(string: productsUrlString)
             else { return }
         
@@ -129,23 +127,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 // retrieve json data from url
                 let data = try JSONDecoder().decode(Products.self, from: data)
                 self.data = data
-                for product in (self.data?.products)! {
-                    print(product.title ?? "")
-                }
-                self.TableView.reloadData()
             }
             catch let jsonErr {
                 print("~Error decoding json with message:\n", jsonErr)
             }
             
+            // reload table view
+            DispatchQueue.main.async{
+                self.TableView.reloadData()
+            }
+            
         }.resume()
-        
-        
-        
-        
-        
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
