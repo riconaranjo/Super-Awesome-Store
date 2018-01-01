@@ -84,7 +84,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     var data: Products?
     let list = ["first", "second", "third"]
-    @IBOutlet weak var TableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     // how many rows
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -134,16 +134,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             // reload table view
             DispatchQueue.main.async{
-                self.TableView.reloadData()
+                self.tableView.reloadData()
             }
             
         }.resume()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-
 }
 
