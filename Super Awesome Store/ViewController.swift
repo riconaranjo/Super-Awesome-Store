@@ -94,10 +94,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // what is in each cell
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
         cell.textLabel?.text = data?.products[indexPath.row].title
-        cell.detailTextLabel?.text = "data?.products[indexPath.row].title"
-        // TODO: figure out how to display description
+        
+        
+        let vendor = data?.products[indexPath.row].vendor != "" ? "Sold by " + (data?.products[indexPath.row].vendor)! : ""
+        let numVariants = data?.products[indexPath.row].variants?.count
+        
+        cell.detailTextLabel?.text = "\(vendor) – \(numVariants ?? 1) variants"
         
         if let image = productImages[indexPath.row] {
             cell.imageView?.image = image
@@ -134,10 +138,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // TODO: change colour scheme
+        
         // populate products array
         data?.products.removeAll()
         productImages = [Int: UIImage]() // index and images
         parseJSON()
+        
     }
     
     public func parseJSON() {
