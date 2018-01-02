@@ -83,7 +83,7 @@ struct Image: Decodable {
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var data: Products?
-    let list = ["first", "second", "third"]
+    var productImages: [Int: UIImage] = [:]
     @IBOutlet weak var tableView: UITableView!
     
     // how many rows
@@ -96,10 +96,37 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
         cell.textLabel?.text = data?.products[indexPath.row].title
+        cell.detailTextLabel?.text = "data?.products[indexPath.row].title"
+        // TODO: figure out how to display description
+        
+        if let image = productImages[indexPath.row] {
+            cell.imageView?.image = image
+            return cell
+        }
+
+        // if download image
+        if let url = URL(string: (data?.products[indexPath.row].image?.src)!) {
+
+            URLSession.shared.dataTask(with: url) { (data, response, err) in
+
+                if err != nil { print("~Error with URL Session\n"); return }
+
+                guard let data = data
+                    else { print("~Error retrieving data\n"); return }
+
+                // save image in dictionary, and display in cell
+                DispatchQueue.main.async() {
+                    let img = UIImage(data: data)
+                    cell.imageView?.image = img
+                    self.productImages[indexPath.row] = img
+                }
+                
+            }.resume()
+        }
         
         return cell
     }
-    
+
     // when cell is pressed
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
@@ -107,11 +134,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // populate produts array
+        // populate products array
         data?.products.removeAll()
+        productImages = [Int: UIImage]() // index and images
+        parseJSON()
+    }
+    
+    public func parseJSON() {
+        
         // url for products as json objects
         let productsUrlString = "https://shopicruit.myshopify.com/admin/products.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6"
-        
         // if not a valid url, quit
         guard let url = URL(string: productsUrlString)
             else { return }
@@ -140,4 +172,3 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }.resume()
     }
 }
-

@@ -34,6 +34,8 @@ URLSession.shared.dataTask(with: url) { (data, response, err) in
  }.resume()	// this is important
 ```
 
+The _guard let_ statements are used to catch any issues with retrieving the data.
+
 Once the json data is parsed, the *TableView* needs to be updated with the new data. Since the *URLSession* is asynchronous, the reloadData command needs to be given with *DispathQueue.main.asynch* in order to run it on the main thread.
 
 ```swift
