@@ -16,7 +16,7 @@ In order to use *JSONDecoder* from a url you need to first make sure the url is 
 
 ```swift
 guard let url = URL(string: productsUrlString)
-	else { return }	// quit if failure
+    else { return } // quit if failure
 ```
 
 In order to retrieve data from a url, you can use a *URLSession* as shown below. This function call is asynchronous.
@@ -24,14 +24,14 @@ In order to retrieve data from a url, you can use a *URLSession* as shown below.
 ```swift
 URLSession.shared.dataTask(with: url) { (data, response, err) in 
     
-	if err != nil { print("~Error with URL Session\n"); return }
+    if err != nil { print("~Error with URL Session\n"); return }
 
-	guard let data = data
-		else { print("~Error retrieving data\n"); return }
+    guard let data = data
+        else { print("~Error retrieving data\n"); return }
 
-	// parse json here
+    // parse json here
 
- }.resume()	// this is important
+ }.resume() // this is important
 ```
 
 The _guard let_ statements are used to catch any issues with retrieving the data.
@@ -94,7 +94,7 @@ Calling the decoder is very simple simply done with one line, withing a do-catch
 do {
     // retrieve json data from url
     let data = try JSONDecoder().decode(Products.self, from: data)
-    self.data = data 	// store the data
+    self.data = data    // store the data
 }
 catch let jsonErr {
     print("~Error decoding json with message:\n", jsonErr)
