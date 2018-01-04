@@ -10,7 +10,7 @@
 **[Dark Status Bar](#dark-status-bar)**<br>
 
 
-![AppIcon](/Super%20Awesome%20Store/Icons/Icon-40%402x.png)
+![AppIcon](/Super%20Awesome%20Store/Icons/Icon-60%403x.png)
 
 This is an app I made for the Mobile Developer Intern at Shopify. It takes products stored as JSON objects and displays each product in a table view.
 
