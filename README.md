@@ -12,7 +12,7 @@ JSON Parsing using Swift 4
 Swift 4 introuduced the ability to use *JSONDecoder*. This is much simpler than using Serializable or third party libraries.
 
 
-###URLSession
+### URLSession
 
 In order to use *JSONDecoder* from a url you need to first make sure the url is valid, so you can use a let guard statement when creating the URL object.
 
@@ -48,7 +48,7 @@ DispatchQueue.main.async{
 
 ```
 
-###JSONDecoder
+### JSONDecoder
 
 With swift 4 came the introduction of *JSONDecoder*, which allows for native json parsing without the need of third-party libraries, or implementing much code.
 
@@ -178,7 +178,8 @@ cell.selectedBackgroundView = backgroundView
 ____________________________________
 Dark Status Bar
 
-##AppDelegate.swift
+### AppDelegate.swift
+
 Since for this app I chose a dark colour scheme, the status bar has to be modified from the default black on white. This is done in the _AppDelegate_ file, by adding the following line in the _didFinishLaunchingWithOptions_ function, shown below:
 
 ```swift
@@ -191,7 +192,8 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-##Info.plist
+### Info.plist
+
 In addition, a boolean roperty needs to be added to the _Info.plist_ file. This allows for the status bar to be modified for the entire application, not just per view controller [even though this application only has the one view].
 
 ```
