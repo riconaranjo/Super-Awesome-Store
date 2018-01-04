@@ -97,6 +97,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // create cell
         let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
         // change colours
+        //
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor(red:0.36, green:0.42, blue:0.42, alpha:1.0)
+        cell.selectedBackgroundView = backgroundView
         cell.textLabel?.textColor = UIColor.white
         cell.detailTextLabel?.textColor = UIColor(red:0.50, green:0.69, blue:0.57, alpha:1.0)
         cell.backgroundColor = UIColor(red:0.30, green:0.30, blue:0.37, alpha:1.0)

@@ -16,9 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // since dark theme status bar
         UIApplication.shared.statusBarStyle = .lightContent
         
-//        setStatusBarBackgroundColor(color: )
         return true
     }
 
@@ -43,14 +44,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    func setStatusBarBackgroundColor(color: UIColor) {
-        
-        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
-        
-        statusBar.backgroundColor = color
-        //statusBar.title
-    }
-
 }
 
