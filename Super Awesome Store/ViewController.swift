@@ -94,10 +94,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // what is in each cell
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // create cell
         let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
+        // change colours
+        cell.textLabel?.textColor = UIColor.white
+        cell.detailTextLabel?.textColor = UIColor(red:0.50, green:0.69, blue:0.57, alpha:1.0)
+        cell.backgroundColor = UIColor(red:0.30, green:0.30, blue:0.37, alpha:1.0)
+        cell.imageView?.image = UIImage(named: "Icons//placeholder_image")
         cell.textLabel?.text = data?.products[indexPath.row].title
         
-        
+        // create vendor text
         let vendor = data?.products[indexPath.row].vendor != "" ? "Sold by " + (data?.products[indexPath.row].vendor)! : ""
         let numVariants = data?.products[indexPath.row].variants?.count
         

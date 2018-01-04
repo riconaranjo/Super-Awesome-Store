@@ -12,8 +12,7 @@
 		E767DAB51FF1B1690062B923 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E767DAB31FF1B1690062B923 /* Main.storyboard */; };
 		E767DAB71FF1B1690062B923 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E767DAB61FF1B1690062B923 /* Assets.xcassets */; };
 		E767DABA1FF1B1690062B923 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E767DAB81FF1B1690062B923 /* LaunchScreen.storyboard */; };
-		E767DAC51FF1B1690062B923 /* Super_Awesome_StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767DAC41FF1B1690062B923 /* Super_Awesome_StoreTests.swift */; };
-		E767DAD01FF1B1690062B923 /* Super_Awesome_StoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E767DACF1FF1B1690062B923 /* Super_Awesome_StoreUITests.swift */; };
+		E78D60FC1FFE967E008E3BE8 /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = E78D60FB1FFE967E008E3BE8 /* Icons */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +41,8 @@
 		E767DAB91FF1B1690062B923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E767DABB1FF1B1690062B923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E767DAC01FF1B1690062B923 /* Super Awesome StoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Super Awesome StoreTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E767DAC41FF1B1690062B923 /* Super_Awesome_StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Super_Awesome_StoreTests.swift; sourceTree = "<group>"; };
-		E767DAC61FF1B1690062B923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E767DACB1FF1B1690062B923 /* Super Awesome StoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Super Awesome StoreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E767DACF1FF1B1690062B923 /* Super_Awesome_StoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Super_Awesome_StoreUITests.swift; sourceTree = "<group>"; };
-		E767DAD11FF1B1690062B923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E78D60FB1FFE967E008E3BE8 /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				E767DAAE1FF1B1690062B923 /* Super Awesome Store */,
-				E767DAC31FF1B1690062B923 /* Super Awesome StoreTests */,
-				E767DACE1FF1B1690062B923 /* Super Awesome StoreUITests */,
 				E767DAAD1FF1B1690062B923 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +91,7 @@
 		E767DAAE1FF1B1690062B923 /* Super Awesome Store */ = {
 			isa = PBXGroup;
 			children = (
+				E78D60FB1FFE967E008E3BE8 /* Icons */,
 				E767DAAF1FF1B1690062B923 /* AppDelegate.swift */,
 				E767DAB11FF1B1690062B923 /* ViewController.swift */,
 				E767DAB31FF1B1690062B923 /* Main.storyboard */,
@@ -105,24 +100,6 @@
 				E767DABB1FF1B1690062B923 /* Info.plist */,
 			);
 			path = "Super Awesome Store";
-			sourceTree = "<group>";
-		};
-		E767DAC31FF1B1690062B923 /* Super Awesome StoreTests */ = {
-			isa = PBXGroup;
-			children = (
-				E767DAC41FF1B1690062B923 /* Super_Awesome_StoreTests.swift */,
-				E767DAC61FF1B1690062B923 /* Info.plist */,
-			);
-			path = "Super Awesome StoreTests";
-			sourceTree = "<group>";
-		};
-		E767DACE1FF1B1690062B923 /* Super Awesome StoreUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E767DACF1FF1B1690062B923 /* Super_Awesome_StoreUITests.swift */,
-				E767DAD11FF1B1690062B923 /* Info.plist */,
-			);
-			path = "Super Awesome StoreUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E767DABA1FF1B1690062B923 /* LaunchScreen.storyboard in Resources */,
+				E78D60FC1FFE967E008E3BE8 /* Icons in Resources */,
 				E767DAB71FF1B1690062B923 /* Assets.xcassets in Resources */,
 				E767DAB51FF1B1690062B923 /* Main.storyboard in Resources */,
 			);
@@ -268,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E767DAC51FF1B1690062B923 /* Super_Awesome_StoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +253,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E767DAD01FF1B1690062B923 /* Super_Awesome_StoreUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +409,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "shopify.Super-Awesome-Store";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -448,7 +424,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "shopify.Super-Awesome-Store";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

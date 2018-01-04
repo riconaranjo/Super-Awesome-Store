@@ -60,7 +60,7 @@ struct Products: Decodable {
 }
 ```
 
-Each Product has its own attributes, such as _ID_, _Title_, and _Vendor_; each of these attributes is represented by a simple data type such as *Int*, *Double*, or *String*.
+Each Product has its own attributes, such as _ID_, _Title_, and _Vendor_; each of these attributes is represented by a primative data-type such as *Int*, *Double*, or *String*, *Bool*, etc..
 
 ```swift
 
