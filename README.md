@@ -1,9 +1,11 @@
 ------------------------------------
 Store App with JSON Parsing Notes
 ------------------------------------
+![AppIcon](/Super%20Awesome%20Store/Icons/Icon-40%402x.png)
 
 This is an app I made for the Mobile Developer Intern at Shopify. It takes products stored as JSON objects and displays each product in a table view.
 
+![ScreenShot](/SuperDuperAwesomeStore.png)
 ____________________________________
 JSON Parsing using Swift 4
 
@@ -104,6 +106,7 @@ catch let jsonErr {
 
 ____________________________________
 Downloading and Displaying Images
+
 
 
 
