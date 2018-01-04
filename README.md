@@ -1,13 +1,22 @@
 ------------------------------------
-Store App with JSON Parsing Notes
+# Store App with JSON Parsing Notes
 ------------------------------------
+
+## Table of Contents
+
+**[JSON Parsing using Swift 4](#json-parsing-using-swift-4)**<br>
+**[Downloading and Displaying Images](#downloading-and-displaying-images)**<br>
+**[Changing Cell Style](#changing-cell-style)**<br>
+**[Dark Status Bar](#dark-status-bar)**<br>
+
+
 ![AppIcon](/Super%20Awesome%20Store/Icons/Icon-40%402x.png)
 
 This is an app I made for the Mobile Developer Intern at Shopify. It takes products stored as JSON objects and displays each product in a table view.
 
 ![ScreenShot](/SuperDuperAwesomeStore.png)
 ____________________________________
-JSON Parsing using Swift 4
+## JSON Parsing using Swift 4
 
 Swift 4 introuduced the ability to use *JSONDecoder*. This is much simpler than using Serializable or third party libraries.
 
@@ -105,7 +114,7 @@ catch let jsonErr {
 ```
 
 ____________________________________
-Downloading and Displaying Images
+## Downloading and Displaying Images
 
 Each product has an a main image, and an array of images; for the table view, the main image is displayed at the right of each cell.
 
@@ -150,7 +159,7 @@ cell.imageView?.image = UIImage(named: "Icons//placeholder_image")
 ```
 
 ____________________________________
-Changing Cell Style
+## Changing Cell Style
 
 In order to change the cell style [without creating a custom *UITableViewCellStyle*], you must change the attributes for the cell on creation. This is done in the _cellForRowAt_ function shown below:
 
@@ -176,7 +185,7 @@ cell.selectedBackgroundView = backgroundView
 ```
 
 ____________________________________
-Dark Status Bar
+## Dark Status Bar
 
 ### AppDelegate.swift
 
