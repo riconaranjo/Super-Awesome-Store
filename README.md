@@ -88,9 +88,9 @@ struct Product: Decodable {
 
 Each attribute has a question mark in order to mark it as an _optional_; this means that if no value is found for this attribute, it will just give it a value of _nil_.
 
-These structs should be implemented with the exact same names and data types as the json data, with one root struct, like the Products struct shown above.
+These structs should be implemented with the exact same names and data types as the json data, with one root struct, like the *Products* struct shown above.
 
-Calling the decoder is very simple simply done with one line, withing a do-catch block:
+Calling the decoder is very simple simply done with one line, within a do-catch block:
 
 ```swift
 do {
@@ -107,11 +107,93 @@ catch let jsonErr {
 ____________________________________
 Downloading and Displaying Images
 
+Each product has an a main image, and an array of images; for the table view, the main image is displayed at the right of each cell.
 
+![Cell](/cell.png)
 
+Each image needs to be downloaded and stored so it is not downloaded everytime the view is refreshed. This is done using a *Dictionary* of *UIImages* with the product index.
 
+```swift
+productImages = [Int: UIImage]() // index and images
+```
 
+In the json structure, each image has a source url where the image can be downloaded from. In order to download these, a *URLSession* is used in the same way as for retrieving the json data. Here a session is started for each image at the same time as the cell is populated with the Product title, vendor, and number of variants.
 
+When the image is retrieved, it is both loaded onto the table view cell and stored in the _productImages_ dictionary along with the index of the cell.
 
+```swift
+if let url = URL(string: (data?.products[indexPath.row].image?.src)!) {
 
+    URLSession.shared.dataTask(with: url) { (data, response, err) in
 
+        if err != nil { print("~Error with URL Session\n"); return }
+
+        guard let data = data
+            else { print("~Error retrieving data\n"); return }
+
+        // save image in dictionary, and display in cell
+        DispatchQueue.main.async() {
+            let img = UIImage(data: data)
+            cell.imageView?.image = img                 // load image onto cell
+            self.productImages[indexPath.row] = img     // store image
+        }
+        
+    }.resume()
+}
+```
+Now each time the table view is refreshed, the image will be retrieved from the dictionary and amounts to significant increase in performance.
+
+Additionally, a placeholder image can be used to render the *ImageView* in the cell, also increases the loading time of the images in the application.
+
+```swift
+cell.imageView?.image = UIImage(named: "Icons//placeholder_image")
+```
+
+____________________________________
+Changing Cell Style
+
+In order to change the cell style [without creating a custom *UITableViewCellStyle*], you must change the attributes for the cell on creation. This is done in the _cellForRowAt_ function shown below:
+
+```swift
+public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    // create cell
+    let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
+
+    // modify cell here
+
+    return cell
+}
+```
+
+Each attribute of the *UITableViewCell* can be modified through here, such as the main text (*textLabel*) subtitle (*detaileTextLabel*), background colour (*backgroundColor*), etc.
+
+These are all straightforward, except for the selected background colour; A *UIView* needs to be created, and have its b*ackgroundColour* modified to the desired selected background colour. An ezxample of this is shown below:
+
+```swift
+let backgroundView = UIView()
+backgroundView.backgroundColor = UIColor(red:0.36, green:0.42, blue:0.42, alpha:1.0)
+cell.selectedBackgroundView = backgroundView
+```
+
+____________________________________
+Dark Status Bar
+
+##AppDelegate.swift
+Since for this app I chose a dark colour scheme, the status bar has to be modified from the default black on white. This is done in the _AppDelegate_ file, by adding the following line in the _didFinishLaunchingWithOptions_ function, shown below:
+
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    
+    // since dark theme status bar
+    UIApplication.shared.statusBarStyle = .lightContent
+    
+    return true
+}
+```
+
+##Info.plist
+In addition, a boolean roperty needs to be added to the _Info.plist_ file. This allows for the status bar to be modified for the entire application, not just per view controller [even though this application only has the one view].
+
+```
+View controller-based status bar appearance, Boolean, NO
+```

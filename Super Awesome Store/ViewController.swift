@@ -35,7 +35,7 @@ struct Variant: Decodable {
     let id: Int?
     let product_id: Int?
     let title: String?
-    let price: String? // convert to double?
+    let price: String?
     let sku: String?
     let position: Int?
     let inventory_policy: String?
@@ -97,7 +97,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // create cell
         let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
         // change colours
-        //
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor(red:0.36, green:0.42, blue:0.42, alpha:1.0)
         cell.selectedBackgroundView = backgroundView
@@ -107,18 +106,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.imageView?.image = UIImage(named: "Icons//placeholder_image")
         cell.textLabel?.text = data?.products[indexPath.row].title
         
-        // create vendor text
-        let vendor = data?.products[indexPath.row].vendor != "" ? "Sold by " + (data?.products[indexPath.row].vendor)! : ""
-        let numVariants = data?.products[indexPath.row].variants?.count
+        cell.detailTextLabel?.text = vendorText(index: indexPath.row)
         
-        cell.detailTextLabel?.text = "\(vendor) – \(numVariants ?? 1) variants"
-        
+        // quit if image has already been downloaded
         if let image = productImages[indexPath.row] {
             cell.imageView?.image = image
             return cell
         }
 
-        // if download image
+        // else download image
         if let url = URL(string: (data?.products[indexPath.row].image?.src)!) {
 
             URLSession.shared.dataTask(with: url) { (data, response, err) in
@@ -140,6 +136,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
+    
+    /// Builds detail text label for tableview cells
+    public func vendorText(index: Int) -> String{
+        let vendor = data?.products[index].vendor != "" ? "Sold by " + (data?.products[index].vendor)! : ""
+        let numVariants = data?.products[index].variants?.count
+        let vendorText = "\(vendor) – \(numVariants ?? 1) variants"
+        
+        return vendorText
+    }
 
     // when cell is pressed
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -148,10 +153,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TODO: change colour scheme
-        
-        // populate products array
-        data?.products.removeAll()
+        data?.products.removeAll()       // populate products array
         productImages = [Int: UIImage]() // index and images
         parseJSON()
         
