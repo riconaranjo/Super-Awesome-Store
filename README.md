@@ -47,7 +47,7 @@ URLSession.shared.dataTask(with: url) { (data, response, err) in
 
 The _guard let_ statements are used to catch any issues with retrieving the data.
 
-Once the json data is parsed, the *TableView* needs to be updated with the new data. Since the *URLSession* is asynchronous, the reloadData command needs to be given with *DispathQueue.main.asynch* in order to run it on the main thread.
+Once the JSON data is parsed, the *TableView* needs to be updated with the new data. Since the *URLSession* is asynchronous, the reloadData command needs to be given with *DispathQueue.main.asynch* in order to run it on the main thread.
 
 ```swift
 // reload table view
@@ -59,9 +59,9 @@ DispatchQueue.main.async{
 
 ### JSONDecoder
 
-With swift 4 came the introduction of *JSONDecoder*, which allows for native json parsing without the need of third-party libraries, or implementing much code.
+With swift 4 came the introduction of *JSONDecoder*, which allows for native JSON parsing without the need of third-party libraries, or implementing much code.
 
-In order to use *JSONDecoder*, the json structure of the data can to be implemented using stucts. A list [square brackets] in json is an array of swift structs, and a key-value pair [curly brackets] in json is a swift *struct*.
+In order to use *JSONDecoder*, the JSON structure of the data can to be implemented using stucts. A list [square brackets] in JSON is an array of swift structs, and a key-value pair [curly brackets] in JSON is a swift *struct*.
 
 For example since there are many _Products_ they are represented by a list of type Product:
 
@@ -97,7 +97,7 @@ struct Product: Decodable {
 
 Each attribute has a question mark in order to mark it as an _optional_; this means that if no value is found for this attribute, it will just give it a value of _nil_.
 
-These structs should be implemented with the exact same names and data types as the json data, with one root struct, like the *Products* struct shown above.
+These structs should be implemented with the exact same names and data types as the JSON data, with one root struct, like the *Products* struct shown above.
 
 Calling the decoder is very simple simply done with one line, within a do-catch block:
 
@@ -108,7 +108,7 @@ do {
     self.data = data    // store the data
 }
 catch let jsonErr {
-    print("~Error decoding json with message:\n", jsonErr)
+    print("~Error decoding JSON with message:\n", jsonErr)
 }
 
 ```
@@ -126,7 +126,7 @@ Each image needs to be downloaded and stored so it is not downloaded everytime t
 productImages = [Int: UIImage]() // index and images
 ```
 
-In the json structure, each image has a source url where the image can be downloaded from. In order to download these, a *URLSession* is used in the same way as for retrieving the json data. Here a session is started for each image at the same time as the cell is populated with the Product title, vendor, and number of variants.
+In the JSON structure, each image has a source url where the image can be downloaded from. In order to download these, a *URLSession* is used in the same way as for retrieving the JSON data. Here a session is started for each image at the same time as the cell is populated with the Product title, vendor, and number of variants.
 
 When the image is retrieved, it is both loaded onto the table view cell and stored in the _productImages_ dictionary along with the index of the cell.
 
