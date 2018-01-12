@@ -208,3 +208,8 @@ In addition, a boolean roperty needs to be added to the _Info.plist_ file. This 
 ```
 View controller-based status bar appearance, Boolean, NO
 ```
+
+
+### Video
+
+A simple video of the app functioning can be found [here](https://github.com/FedericoNaranjo/Super-Awesome-Store/blob/master/SuperDuperVideo.MP4).
